@@ -37,6 +37,11 @@ def jackson_version = '2.5.4'
 def jetty_version = '9.2.12.v20150709'
 def jersey_version = '2.22.1'
 
+ScalaCompileOptions.metaClass.daemonServer = true
+ScalaCompileOptions.metaClass.fork = true
+ScalaCompileOptions.metaClass.useAnt = false
+ScalaCompileOptions.metaClass.useCompileDaemon = false
+
 allprojects {
   apply plugin: 'idea'
   repositories {
